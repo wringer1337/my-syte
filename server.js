@@ -106,6 +106,15 @@ app.use(
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+const rootPhotoFiles = new Set(['images.jpg', 'Visla2.png', 'derevo.jpg']);
+app.get('/photos/:filename', (req, res) => {
+  const { filename } = req.params;
+  if (!rootPhotoFiles.has(filename)) {
+    return res.status(404).send('Файл не найден');
+  }
+  res.sendFile(path.join(__dirname, filename));
+});
+
 function authRequired(req, res, next) {
   if (req.session.user) {
     next();
