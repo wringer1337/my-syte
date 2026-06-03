@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Заявка на расчёт — Висла Гласс</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">Висла Гласс</div>
+      <nav>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about.html">О нас</a></li>
+          <li><a href="/assistant.html">ИИ-помощник</a></li>
+        </ul>
+      </nav>
+      <button id="logout-button" class="btn-secondary">Выйти</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-title">Заявка на расчёт</div>
+      <div class="card" style="max-width: 760px; margin: 0 auto;">
+        <div id="page-alert" class="alert"></div>
+        <form id="request-form">
+          <label>Тип изделия
+            <select id="request-type" required>
+              <option value="window">Окно</option>
+              <option value="door">Дверь</option>
+              <option value="glass">Стеклопакет</option>
+            </select>
+          </label>
+          <label>Ширина (мм)
+            <input id="request-width" type="number" min="100" placeholder="Например, 1200" required />
+          </label>
+          <label>Высота (мм)
+            <input id="request-height" type="number" min="100" placeholder="Например, 1500" required />
+          </label>
+          <label>Количество
+            <input id="request-count" type="number" min="1" value="1" required />
+          </label>
+          <label>Телефон для связи
+            <input id="request-phone" type="tel" placeholder="8XXXXXXXXXX" required />
+          </label>
+          <label>Комментарий к заявке
+            <textarea id="request-message" rows="5" placeholder="Укажите дополнительные параметры или пожелания"></textarea>
+          </label>
+          <button class="btn" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+
+      <section class="section">
+        <div class="section-title">Мои заявки</div>
+        <div class="card">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Тип</th>
+                <th>Ширина</th>
+                <th>Высота</th>
+                <th>Кол-во</th>
+                <th>Телефон</th>
+                <th>Статус</th>
+                <th>Дата</th>
+              </tr>
+            </thead>
+            <tbody id="my-requests-table">
+              <tr><td colspan="7">Загрузка...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Висла Гласс</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

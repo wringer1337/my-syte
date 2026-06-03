@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личный кабинет — Висла Гласс</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">Висла Гласс</div>
+      <nav>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/request.html">Заявка</a></li>
+          <li><a href="/assistant.html">ИИ-помощник</a></li>
+        </ul>
+      </nav>
+      <button id="logout-button" class="btn-secondary">Выйти</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="dashboard-panel" class="section">
+      <div class="section-title">Личный кабинет</div>
+      <div id="page-alert" class="alert"></div>
+      <div class="card">
+        <h2 id="dashboard-welcome">Загрузка данных...</h2>
+        <p>Смотрите последние расчёты и отправленные заявки в одном месте.</p>
+      </div>
+
+      <section class="section">
+        <div class="section-title">Последние расчёты</div>
+        <div class="card">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Тип</th>
+                <th>Ширина</th>
+                <th>Высота</th>
+                <th>Кол-во</th>
+                <th>Цена</th>
+                <th>Дата</th>
+              </tr>
+            </thead>
+            <tbody id="calculations-table">
+              <tr><td colspan="6">Загрузка...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Мои заявки</div>
+        <div class="card">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Тип</th>
+                <th>Ширина</th>
+                <th>Высота</th>
+                <th>Кол-во</th>
+                <th>Телефон</th>
+                <th>Статус</th>
+                <th>Дата</th>
+              </tr>
+            </thead>
+            <tbody id="dashboard-requests-table">
+              <tr><td colspan="7">Загрузка...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Висла Гласс</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админ-панель — Висла Гласс</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">Висла Гласс</div>
+      <nav>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/dashboard.html">Кабинет</a></li>
+          <li><a href="/assistant.html">ИИ-помощник</a></li>
+        </ul>
+      </nav>
+      <button id="logout-button" class="btn-secondary">Выйти</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="admin-panel" class="section">
+      <div class="section-title">Админ-панель</div>
+      <div id="page-alert" class="alert"></div>
+
+      <div class="stats-grid">
+        <div class="stats-card">
+          <strong id="stat-users">0</strong>
+          <span>Пользователей</span>
+        </div>
+        <div class="stats-card">
+          <strong id="stat-calculations">0</strong>
+          <span>Расчётов</span>
+        </div>
+        <div class="stats-card">
+          <strong id="stat-requests">0</strong>
+          <span>Заявок</span>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="section-title">Заявки на расчет</div>
+        <div class="card">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Клиент</th>
+                <th>Email</th>
+                <th>Телефон</th>
+                <th>Тип</th>
+                <th>Размер</th>
+                <th>Кол-во</th>
+                <th>Статус</th>
+                <th>Дата</th>
+              </tr>
+            </thead>
+            <tbody id="requests-table">
+              <tr><td colspan="9">Загрузка...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Пользователи</div>
+        <div class="card">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Email</th>
+                <th>Роль</th>
+              </tr>
+            </thead>
+            <tbody id="users-table">
+              <tr><td colspan="4">Загрузка...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Медиа-настройки сайта</div>
+        <div class="card">
+          <div class="small-note">Поменяйте изображение, заголовок и подзаголовок главной страницы.</div>
+          <form id="media-form">
+            <input id="hero-image" type="url" placeholder="URL фонового изображения" required />
+            <input id="hero-title-input" type="text" placeholder="Заголовок на главной" required />
+            <textarea id="hero-caption-input" rows="4" placeholder="Подзаголовок на главной" required></textarea>
+            <button class="btn" type="submit">Сохранить медиа</button>
+          </form>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Висла Гласс</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

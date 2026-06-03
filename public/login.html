@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вход — Висла Гласс</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">Висла Гласс</div>
+      <nav>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about.html">О нас</a></li>
+          <li><a href="/request.html">Заявка</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-title">Вход в личный кабинет</div>
+      <div class="card" style="max-width: 520px; margin: 0 auto;">
+        <div id="page-alert" class="alert"></div>
+        <form id="login-form">
+          <input id="email" type="email" placeholder="Email" required />
+          <input id="password" type="password" placeholder="Пароль" required />
+          <button class="btn" type="submit">Войти</button>
+        </form>
+        <p style="margin-top: 16px; color: var(--muted);">Нет аккаунта? <a href="/register.html">Зарегистрироваться</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Висла Гласс</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ИИ-помощник — Висла Гласс</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">Висла Гласс</div>
+      <nav>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about.html">О нас</a></li>
+          <li><a href="/request.html">Заявка</a></li>
+        </ul>
+      </nav>
+      <button id="logout-button" class="btn-secondary">Выйти</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-title">ИИ-помощник</div>
+      <div id="page-alert" class="alert"></div>
+      <div class="card" style="max-width: 720px; margin: 0 auto;">
+        <p>Задайте вопрос об окнах, дверях, стеклопакетах, ролях или админ-панели. Помощник даст быстрый ответ.</p>
+        <form id="assistant-form">
+          <textarea id="question" rows="5" placeholder="Например: Как рассчитать цену окна?" required style="resize: vertical;"></textarea>
+          <button class="btn" type="submit">Спросить</button>
+        </form>
+        <div id="assistant-answer" style="margin-top: 22px; padding: 20px; border-radius: 20px; background: #f8fafc; color: var(--text);"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Висла Гласс</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

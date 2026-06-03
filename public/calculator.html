@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Калькулятор — Висла Гласс</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">Висла Гласс</div>
+      <nav>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about.html">О нас</a></li>
+          <li><a href="/request.html">Заявка</a></li>
+        </ul>
+      </nav>
+      <button id="logout-button" class="btn-secondary">Выйти</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-title">Калькулятор стоимости</div>
+      <div id="page-alert" class="alert"></div>
+      <div class="card" style="max-width: 640px; margin: 0 auto;">
+        <form id="calculator-form">
+          <label>
+            Тип изделия
+            <select id="type" required>
+              <option value="window">Окно</option>
+              <option value="door">Дверь</option>
+              <option value="glass">Стеклопакет</option>
+            </select>
+          </label>
+          <label>
+            Ширина (мм)
+            <input id="width" type="number" min="100" placeholder="Например, 1200" required />
+          </label>
+          <label>
+            Высота (мм)
+            <input id="height" type="number" min="100" placeholder="Например, 1500" required />
+          </label>
+          <label>
+            Количество
+            <input id="count" type="number" min="1" value="1" required />
+          </label>
+          <button class="btn" type="submit">Рассчитать</button>
+        </form>
+        <p id="calc-result" style="margin-top: 18px; font-weight: 700;"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Висла Гласс</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
